@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML //EN">
+	<HTML>
+		<HEAD>
+			<TITLE> Home </TITLE>
+		</HEAD>
+		<script type="text/javascript">
+			var imageID=0;
+function changeimage(every_seconds){
+    //change the image
+    if(!imageID){
+       document.body.style.background="#f3f3f3 url('Home.JPG') no-repeat left top";
+        imageID++;
+    }
+    else{if(imageID==1){
+    	 document.body.style.background="#f3f3f3 url('background.jpg') no-repeat left top";
+        imageID++;
+    }else{if(imageID==2){
+        document.body.style.background="#f3f3f3 url('Home.JPG') no-repeat left top";
+        imageID=0;
+    }}}
+    //call same function again for x of seconds
+    setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
+}
+		</script>
+		<body onload='changeimage(5)'>
+			<style>
+				body{
+				background-repeat: repeat-y;
+				color: white;
+				}
+				h1{
+				font-size: 100px;
+				text-align: center;
+				}
+				
+
+			
+			</style>
+			<H1 style="font-family: Brush Script MT;">  Home  </H1>
+			
+			<br><br><br><br><br><br>
+			<a href="Level1.html"> <img onmouseover= "this.src='open1.png'" onmouseout= "this.src='closed1.jpg'" src="closed1.jpg" id="firt" alt="closed" style="margin-left:90px;"> </a>
+			<a href="Level2.html"> <img onmouseover= "this.src='open1.png'" onmouseout= "this.src='closed2.jpg'" src="closed2.jpg" id="firt" alt="closed" style="margin-left:280px;"> </a>
+			<a href="Level3.html"> <img onmouseover= "this.src='open1.png'" onmouseout= "this.src='closed3.jpg'" src="closed3.jpg" id="firt" alt="closed" style="margin-left:310px;"> </a>
+
+			
+
+			
+		</body>
+	</HTML>
